@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golang example</title>
+</head>
+<style>
+    * {
+  height: auto;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+header {
+  height: 3rem;
+  background-color: antiquewhite;
+  text-align: center;
+}
+.main-header p{
+    font-size: 1.5rem;
+}
+header h1{
+    font-size: 2.5rem;
+    color: black;
+}
+a {
+	text-decoration: none;
+	color: whitesmoke;
+}
+a:hover {
+	font-size: 25px;
+	color: lightcoral;
+	text-decoration: underline;
+}
+a:active {
+	color: blue;
+}
+a:visited {
+	color: purple;
+}
+body{
+    background-color: #4169e1;
+    color: aliceblue;
+}
+@media screen and (max-width: 500px) {
+    header {
+        height: 5rem;
+        text-align: center;
+        vertical-align:middle;
+    }
+}
+.comment{
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+</style>
+<body>
+    <header>
+        <h1>Guestbook</h1>
+    </header>
+    <div class="main-header">
+            <p>Quantity records  - {{.Count}}  <a href="/guestbook/addComment">Add your record</a></p>
+    </div>
+    <div class="main-content">
+        <h1>Guest comment</h1>
+        <div class="comment">
+            {{range .List}}
+            <p>{{.}}</p>
+            {{end}}
+        </div>
+    </div>
+</body>
+</html>

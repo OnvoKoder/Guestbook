@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golang example</title>
+</head>
+<style>
+    * {
+  height: auto;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+header {
+  height: 3rem;
+  background-color: antiquewhite;
+  text-align: center;
+}
+.main-header p{
+    font-size: 1.5rem;
+}
+header h1{
+    font-size: 2.5rem;
+    color: black;
+}
+@media screen and (max-width: 500px) {
+    header {
+        height: 5rem;
+        text-align: center;
+        vertical-align:middle;
+    }
+}
+body{
+    background-color: #4169e1;
+    color: aliceblue;
+}
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+.submit-btn{
+  position: relative;
+  width: 150px;
+  height: 27px;
+  border-radius: 5px;
+  font-size: 18px;
+  left: 27%;
+  background-color: #4169e1;
+  margin: 2% auto;
+}
+.main-content{
+    max-width: 350px;
+    align-items: center;
+    background-color: whitesmoke;
+    position: relative;
+    margin: 2% auto;
+    padding: 5px;
+    overflow: hidden;
+    
+}
+.main-content h1{
+    color: black;
+    
+}
+</style>
+<body>
+    <header>
+        <h1>Guestbook</h1>
+    </header>
+    <div class="main-content">
+        <h1>Add your comment</h1>
+        <form action="/guestbook/create" method="post">
+            <input class="input-field" placeholder="Author" type="text" name="author">
+            <input class="input-field" placeholder="Comment" required type="text" name="comment">
+            <button type="submit" class="submit-btn">Send</button>
+        </form>
+    </div>
+</body>
+</html>
